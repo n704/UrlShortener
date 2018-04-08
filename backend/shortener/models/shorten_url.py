@@ -15,6 +15,9 @@ class ShortenUrl(models.Model):
     
     objects = ShortenUrlManager()
     
+    class Meta:
+        ordering = ['-created']
+
     def __str__(self):
         return str(self.url)
 
